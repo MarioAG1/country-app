@@ -1,16 +1,19 @@
 <h2>Por capital</h2>
-<hr>
+<hr />
 
 <div class="row">
   <div class="col">
     <!-- Search Box -->
-    <shared-search-box placeholder="Este es un nuevo placeholder"></shared-search-box>
+    <shared-search-box
+      (onValue)="searchByCapital($event)"
+      placeholder="Este es un nuevo placeholder"
+    ></shared-search-box>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <hr>
+    <hr />
     tabla de resultados
   </div>
 </div>
