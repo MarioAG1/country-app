@@ -8,15 +8,15 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
 
 const routes: Routes = [
   {
-    path: "by-capital-page",
+    path: "by-capital",
     component: ByCapitalPageComponent
   },
   {
-    path: "by-country-page",
+    path: "by-country",
     component: ByCountryPageComponent
   },
   {
-    path: "by-region-page",
+    path: "by-region",
     component: ByRegionPageComponent
   },
   {
