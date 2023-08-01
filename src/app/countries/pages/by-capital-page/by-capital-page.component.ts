@@ -10,7 +10,7 @@ import { Country } from '../../interfaces/country';
 })
 export class ByCapitalPageComponent {
 
-  public countries: Country[] = [];
+  public  countries: Country[] = [];
 
   constructor ( private countryService: CountryService) {
 
