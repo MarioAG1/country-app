@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { CountryService } from '../../services/countries.service.ts.service';
+import { Component } from '@angular/core';
 import { Country } from '../../interfaces/country';
+import { CountryService } from '../../services/countries.service.ts.service';
+
 
 @Component({
   selector: 'app-by-capital-page',
