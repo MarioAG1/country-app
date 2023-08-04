@@ -2,6 +2,7 @@
   <div class="alert alert-info text-center">Espere por favor</div>
 </ng-template>
 
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <div *ngIf="country; else loading">
   <div class="row">
     <div class="col-12">

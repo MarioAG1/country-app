@@ -11,18 +11,21 @@ import { CountryService } from '../../services/countries.service.ts.service';
 })
 export class ByCapitalPageComponent {
 
-  public  countries: Country[] = [];
+  public countries: Country[] = [];
+  public isLoading: boolean = false
 
-  constructor ( private countryService: CountryService) {
+  constructor(private countryService: CountryService) {
 
   }
 
 
   public searchByCapital(term: string) {
+    this.isLoading = true
     this.countryService.searchCapital(term)
-    .subscribe(countries => {
-      this.countries = countries
-    })
+      .subscribe(countries => {
+        this.countries = countries
+        this.isLoading = false
+      })
 
   }
 }
