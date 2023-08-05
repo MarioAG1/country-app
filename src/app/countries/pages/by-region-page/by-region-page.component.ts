@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Country } from '../../interfaces/country';
 import { CountryService } from '../../services/countries.service.ts.service';
 
+type Region = "Africa" | "America" | "Europe" | "Asia" | "Oceania"
 
 @Component({
   selector: 'app-by-region-page',
@@ -13,6 +14,8 @@ export class ByRegionPageComponent {
 
   public countries: Country[] = []
   public isLoading: boolean = false
+  public regions: Region[] = ["Africa", "America", "Europe", "Asia", "Oceania"]
+  public selectedRegion? : Region
 
 
 
@@ -20,9 +23,10 @@ export class ByRegionPageComponent {
 
   }
 
-  public searchByRegion(term: string) {
+  public searchByRegion(region: Region) {
+    this.selectedRegion = region
     this.isLoading = true
-    this.countryService.searchRegion(term)
+    this.countryService.searchRegion(region)
       .subscribe(countries => {
         this.countries = countries
         this.isLoading = false
